@@ -3,8 +3,8 @@
 // require('dotenv').config({path: './env'})
 
 import dotenv from "dotenv";
-import connectDB from "./src/db/index.js";
-import { app } from './src/app.js';
+import connectDB from "./db/index.js";
+import { app } from './app.js';
 import 'colors';
 import mongoose from "mongoose";
 
@@ -16,14 +16,14 @@ const server = app.listen(process.env.PORT || 8000, () => {
   console.log(`⚙️  Server is running at port : ${process.env.PORT}`.cyan.bold);
 });
 
-process.title = 'SnylloAirHBOT Backend';
+process.title = 'SnylloAirHBOT';
 
 const gracefulShutdown = async () => {
   console.log('📢 Received shutdown signal, closing server and database connections...'.yellow.bold);
 
   await mongoose.disconnect();
   server.close(() => {
-    console.log('💤 Server and database connections closed successfully.'.green.bold);
+    console.log('💤 Server and database connections closed successfully.'.blue.bold);
     process.exit(0);
   });
 };

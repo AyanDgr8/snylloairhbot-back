@@ -5,7 +5,10 @@ import mongoose from 'mongoose';
 // const mongoose = require('mongoose');
 
 const formSchema = new mongoose.Schema({
-    name: { type: String, required: [true, "Name is required"] },
+    name: { 
+        type: String, 
+        required: [true, "Name is required"] 
+    },
     phone: { 
         type: Number, 
         required: [true, "Phone number is required"], 
