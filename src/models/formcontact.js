@@ -23,11 +23,11 @@ const formSchema = new mongoose.Schema({
     },
     country: { 
         type: String, 
-        required:  [true, "Country is required"] 
+        // required:  [true, "Country is required"] 
     },
     profession: { 
         type: String, 
-        required:   [true, "Profession is required"] 
+        // required:   [true, "Profession is required"] 
     },
     message: { type: String, required: true },
 });
